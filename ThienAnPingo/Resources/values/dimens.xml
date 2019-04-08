@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="slide_image_stroke">5dp</dimen>
+  <dimen name="big_stroke">10dp</dimen>
+  <dimen name="manual_size">300dp</dimen>
+  <dimen name="radius_corner">4dp</dimen>
+  <dimen name="btn_height">75dp</dimen>
+  <dimen name="btn_width">270dp</dimen>
+  <dimen name="number_radius">77dp</dimen>
+  <dimen name="num_size">150dp</dimen>
+</resources>

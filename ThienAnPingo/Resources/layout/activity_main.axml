@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="#000000"
+                android:padding="20dp"
+                android:layout_height="match_parent">
+  <Button
+    android:text="CHOOSE"
+    android:background="@drawable/btn_background"
+    android:textSize="30sp"
+    android:id="@+id/choose_number_btn"
+    android:textColor="@drawable/btn_text_color"
+    android:layout_height="@dimen/btn_height"
+    android:layout_width="@dimen/btn_width"/>
+  <Button
+    android:layout_marginLeft="20dp"
+    android:textSize="30sp"
+    android:layout_toRightOf="@+id/choose_number_btn"
+    android:text="CHOSEN LIST"
+    android:background="@drawable/btn_background"
+    android:id="@+id/get_list_btn"
+    android:textColor="@drawable/btn_text_color"
+    android:layout_height="@dimen/btn_height"
+    android:layout_width="@dimen/btn_width"/>
+  <Button
+    android:layout_marginLeft="20dp"
+    android:layout_toRightOf="@+id/get_list_btn"
+    android:text="GAME RESTARTING"
+    android:background="@drawable/btn_background"
+    android:id="@+id/restart_btn"
+    android:textSize="30sp" 
+    android:textColor="@drawable/btn_text_color"
+    android:layout_height="@dimen/btn_height"
+    android:layout_width="@dimen/btn_width"/>
+  <GridView
+    android:numColumns="5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/chosen_list"
+    android:layout_centerInParent="true"
+    android:horizontalSpacing="10dp"
+    android:verticalSpacing="15dp"
+    android:gravity="center"
+    android:visibility="gone"    >
+  </GridView>
+  <RelativeLayout
+    android:id="@+id/roll_area"
+    android:layout_centerInParent="true"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+    <RelativeLayout
+      android:id="@+id/roll_objects"
+      android:background="@drawable/frame"
+      android:layout_height="350dp"
+      android:layout_width="990dp"      >
+      <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"        >
+        <ThienAnPingo.SlideImage
+          app:ImageSize="@dimen/manual_size"
+          android:id="@+id/slide_left"
+          android:layout_width="@dimen/manual_size"
+          android:layout_height="@dimen/manual_size"/>
+        <ThienAnPingo.SlideImage
+          android:layout_toRightOf="@+id/slide_left"
+          app:ImageSize="@dimen/manual_size"
+          android:layout_marginLeft="10dp"
+          android:id="@+id/slide_center"
+          android:layout_width="@dimen/manual_size"
+          android:layout_height="@dimen/manual_size"/>
+        <ThienAnPingo.SlideImage
+          android:layout_toRightOf="@+id/slide_center"
+          app:ImageSize="@dimen/manual_size"
+          android:layout_marginLeft="10dp"
+          android:id="@+id/slide_right"
+          android:layout_width="@dimen/manual_size"
+          android:layout_height="@dimen/manual_size"/>
+      </RelativeLayout>    
+    </RelativeLayout>
+    <ImageView
+      android:layout_toRightOf="@+id/roll_objects"
+      android:src="@drawable/roll_btn_background"
+      android:layout_height="300dp"
+      android:layout_width="30dp"
+      android:id="@+id/roll_img"/>
+  </RelativeLayout>
+  <com.airbnb.lottie.LottieAnimationView
+    android:layout_centerInParent="true"
+    android:id="@+id/animation_view"
+    android:layout_width="500dp"
+    android:layout_height="500dp"      />
+  
+
+</RelativeLayout>
